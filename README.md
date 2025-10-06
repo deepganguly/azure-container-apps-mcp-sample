@@ -1,6 +1,6 @@
-# MCP Live Forex Converter
+# MCP Server with HTTP Transport
 
-A production-ready Model Context Protocol (MCP) server that provides live foreign exchange rates using HTTP transport. Perfect for AI assistants that need real-time currency conversion capabilities.
+A Model Context Protocol (MCP) server that provides live foreign exchange rates using HTTP transport. Perfect for AI assistants that need real-time currency conversion capabilities.
 
 ## Features
 
@@ -91,10 +91,7 @@ Add to your VS Code settings.json:
 
 2. **Deploy using the script**
 
-   ```bash
-   chmod +x deploy.sh
-   ./deploy.sh
-   ```
+   ```az containerapp env create --name mcp-forex-env --resource-group mcp-live-rates-rg --location eastus```
 
 ## MCP Tools
 
@@ -108,20 +105,10 @@ Converts amounts between currencies using live exchange rates.
 - `to` (string): Target currency code
 
 ## License
-
 MIT
-
-## Usage Examples
-- "Save this FastAPI code as 'API Route' in python with tags: fastapi, web"
-- "Search for react snippets"
-- "Show me snippet 1"  
-- "Get all JavaScript snippets"
-- "What languages do I have snippets for?"
 
 ## Key Features
 - **HTTP Transport**: Uses modern HTTP configuration
 - **Single Endpoint**: All communication through /mcp
 - **Standard Tools**: Test with curl, Postman, etc.
 - **VS Code Integration**: Natural language queries through Copilot
-
-This transforms VS Code into a personal code snippet manager!
