@@ -1,0 +1,15 @@
+{
+	"servers": {
+		"my-mcp-server-1a118d61": {
+			"url": "https://mcp-live-forex-server.agreeablebush-33a07751.eastus.azurecontainerapps.io/mcp",
+			"type": "http"
+		}
+	},
+	"inputs": [
+		{
+			"id": "convert_currency",
+			"type": "promptString",
+			"description": "Convert {amount} {from} to {to} using live exchange rates"
+		}
+	]
+}

@@ -15,11 +15,11 @@ async function getLiveRates() {
     try {
         // Check cache first
         if (ratesCache && cacheTimestamp && (Date.now() - cacheTimestamp) < CACHE_DURATION) {
-            console.log('📋 Using cached rates');
+            console.log('Using cached rates');
             return ratesCache;
         }
 
-        console.log('🌐 Fetching live exchange rates...');
+        console.log('Fetching live exchange rates...');
         const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
         
         if (!response.ok) {
@@ -31,14 +31,14 @@ async function getLiveRates() {
         if (data && data.rates) {
             ratesCache = data.rates;
             cacheTimestamp = Date.now();
-            console.log('✅ Live rates fetched successfully');
+            console.log('Live rates fetched successfully');
             return data.rates;
         } else {
             throw new Error('Invalid API response - no rates data');
         }
     } catch (error) {
-        console.error('❌ Failed to fetch live rates:', error.message);
-        console.log('🔄 Using fallback exchange rates');
+        console.error('Failed to fetch live rates:', error.message);
+        console.log('Using fallback exchange rates');
         
         // Fallback to realistic mock data
         const fallbackRates = {
